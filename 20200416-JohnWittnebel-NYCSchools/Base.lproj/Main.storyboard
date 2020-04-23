@@ -56,7 +56,7 @@
         <scene sceneID="oy1-SY-Im0">
             <objects>
                 <viewController id="p2X-4T-5iI" customClass="DetailView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rby-1D-zSV">
+                    <view key="view" contentMode="scaleToFill" id="rby-1D-zSV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -65,8 +65,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="KfW-mq-7cE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="Lbj-JR-Fxu"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="N2d-9Y-K0J"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="wAy-cm-cMj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -75,7 +73,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="writingScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vt-Vl-u18">
                                 <rect key="frame" x="20" y="167" width="374" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="It7-FL-PrN"/>
                                     <constraint firstAttribute="height" constant="20.5" id="obw-1D-N0z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -85,7 +82,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="readingScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szd-8d-LWx">
                                 <rect key="frame" x="20" y="195.5" width="374" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="h4c-zT-VZ2"/>
                                     <constraint firstAttribute="height" constant="20.5" id="oGU-Ls-f1V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,7 +91,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mathScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-rU-BlR">
                                 <rect key="frame" x="20" y="224" width="374" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="QrV-fn-IVH"/>
                                     <constraint firstAttribute="height" constant="20.5" id="jBo-03-E2C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -103,10 +98,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-nU-yev">
-                                <rect key="frame" x="20" y="252.5" width="374" height="546"/>
+                                <rect key="frame" x="20" y="252.5" width="374" height="569.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="LpZ-VQ-tdB"/>
-                                    <constraint firstAttribute="height" constant="546" id="ifN-9w-ubH"/>
+                                    <constraint firstAttribute="height" priority="750" constant="546" id="ifN-9w-ubH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -118,6 +112,9 @@
                                     <constraint firstAttribute="height" constant="31" id="fHz-qZ-41u"/>
                                 </constraints>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="p2X-4T-5iI" eventType="touchUpInside" id="t23-7d-kbY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

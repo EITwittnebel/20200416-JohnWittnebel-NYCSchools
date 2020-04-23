@@ -10,13 +10,9 @@
 #define NetworkLayer_h
 #import <UIKit/UIKit.h>
 #import "FullSchoolData.h"
-#import "SatScoreData.h"
-#import "PartialSchoolData.h"
 
 @interface NetworkLayer : NSObject
 @property UITableView *tableToReload;
-@property PartialSchoolData *partial;
-@property SatScoreData *sat;
 @property struct FullSchoolData *data;
 
 - (void) apiCallPartial: (NSString *) theUrl waitInt: (int *) waitVal intoArr: (NSMutableArray *) arr;

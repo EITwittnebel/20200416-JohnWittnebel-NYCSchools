@@ -24,11 +24,9 @@
 
   NSURLSession *session = [NSURLSession sharedSession];
 
-  NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-  {
+  NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-    if(httpResponse.statusCode == 200)
-    {
+    if(httpResponse.statusCode == 200) {
       NSError *parseError = nil;
       NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
       
@@ -37,8 +35,7 @@
       }
      // NSLog(@"The response is - %@",arr[1][@"dbn"]);
     }
-    else
-    {
+    else {
       NSLog(@"Error");
     }
     *waitVal += 1;

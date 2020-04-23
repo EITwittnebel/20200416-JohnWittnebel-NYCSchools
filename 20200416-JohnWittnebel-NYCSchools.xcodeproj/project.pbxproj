@@ -15,6 +15,7 @@
 		3A1DF808244DE68300FAE411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1DF806244DE68300FAE411 /* LaunchScreen.storyboard */; };
 		3A1DF80B244DE68300FAE411 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DF80A244DE68300FAE411 /* main.m */; };
 		3A1DF812244DE7CB00FAE411 /* NetworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DF811244DE7CB00FAE411 /* NetworkLayer.m */; };
+		3A7580DA2451CE78007C14C5 /* FullSchoolData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7580D92451CE78007C14C5 /* FullSchoolData.m */; };
 		3AA36FD4244F6332002225B0 /* SchoolModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA36FD3244F6332002225B0 /* SchoolModelView.m */; };
 		3AA36FE12450B54F002225B0 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA36FE02450B54E002225B0 /* DetailView.m */; };
 /* End PBXBuildFile section */
@@ -35,8 +36,7 @@
 		3A1DF811244DE7CB00FAE411 /* NetworkLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkLayer.m; sourceTree = "<group>"; };
 		3A1DF813244DE7D900FAE411 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		3A3A17A2244F4DA700EC16F2 /* FullSchoolData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullSchoolData.h; sourceTree = "<group>"; };
-		3AA36FD0244F6252002225B0 /* SatScoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SatScoreData.h; sourceTree = "<group>"; };
-		3AA36FD1244F6286002225B0 /* PartialSchoolData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartialSchoolData.h; sourceTree = "<group>"; };
+		3A7580D92451CE78007C14C5 /* FullSchoolData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullSchoolData.m; sourceTree = "<group>"; };
 		3AA36FD2244F6332002225B0 /* SchoolModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchoolModelView.h; sourceTree = "<group>"; };
 		3AA36FD3244F6332002225B0 /* SchoolModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolModelView.m; sourceTree = "<group>"; };
 		3AA36FDF2450B54E002225B0 /* DetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
@@ -73,21 +73,14 @@
 		3A1DF7F7244DE67F00FAE411 /* 20200416-JohnWittnebel-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				3A7580DF2451DAF8007C14C5 /* Network */,
+				3A7580DD2451D961007C14C5 /* Model */,
+				3A7580DE2451DAC5007C14C5 /* ViewControllers */,
+				3A7580DB2451D93C007C14C5 /* ModelView */,
 				3A1DF7F8244DE67F00FAE411 /* AppDelegate.h */,
 				3A1DF7F9244DE67F00FAE411 /* AppDelegate.m */,
 				3A1DF7FB244DE67F00FAE411 /* SceneDelegate.h */,
 				3A1DF7FC244DE67F00FAE411 /* SceneDelegate.m */,
-				3A1DF7FE244DE67F00FAE411 /* SchoolTableViewController.h */,
-				3A1DF7FF244DE67F00FAE411 /* SchoolTableViewController.m */,
-				3AA36FDF2450B54E002225B0 /* DetailView.h */,
-				3AA36FE02450B54E002225B0 /* DetailView.m */,
-				3AA36FD2244F6332002225B0 /* SchoolModelView.h */,
-				3AA36FD3244F6332002225B0 /* SchoolModelView.m */,
-				3A3A17A2244F4DA700EC16F2 /* FullSchoolData.h */,
-				3AA36FD0244F6252002225B0 /* SatScoreData.h */,
-				3AA36FD1244F6286002225B0 /* PartialSchoolData.h */,
-				3A1DF813244DE7D900FAE411 /* NetworkLayer.h */,
-				3A1DF811244DE7CB00FAE411 /* NetworkLayer.m */,
 				3A1DF801244DE67F00FAE411 /* Main.storyboard */,
 				3A1DF804244DE68300FAE411 /* Assets.xcassets */,
 				3A1DF806244DE68300FAE411 /* LaunchScreen.storyboard */,
@@ -95,6 +88,44 @@
 				3A1DF80A244DE68300FAE411 /* main.m */,
 			);
 			path = "20200416-JohnWittnebel-NYCSchools";
+			sourceTree = "<group>";
+		};
+		3A7580DB2451D93C007C14C5 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				3AA36FD2244F6332002225B0 /* SchoolModelView.h */,
+				3AA36FD3244F6332002225B0 /* SchoolModelView.m */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		3A7580DD2451D961007C14C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A3A17A2244F4DA700EC16F2 /* FullSchoolData.h */,
+				3A7580D92451CE78007C14C5 /* FullSchoolData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A7580DE2451DAC5007C14C5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A1DF7FE244DE67F00FAE411 /* SchoolTableViewController.h */,
+				3A1DF7FF244DE67F00FAE411 /* SchoolTableViewController.m */,
+				3AA36FDF2450B54E002225B0 /* DetailView.h */,
+				3AA36FE02450B54E002225B0 /* DetailView.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A7580DF2451DAF8007C14C5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3A1DF813244DE7D900FAE411 /* NetworkLayer.h */,
+				3A1DF811244DE7CB00FAE411 /* NetworkLayer.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7580DA2451CE78007C14C5 /* FullSchoolData.m in Sources */,
 				3A1DF800244DE67F00FAE411 /* SchoolTableViewController.m in Sources */,
 				3A1DF7FA244DE67F00FAE411 /* AppDelegate.m in Sources */,
 				3A1DF812244DE7CB00FAE411 /* NetworkLayer.m in Sources */,

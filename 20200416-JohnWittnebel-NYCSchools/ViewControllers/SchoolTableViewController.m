@@ -9,6 +9,7 @@
 #import "SchoolTableViewController.h"
 #import "SchoolModelView.h"
 #import "DetailView.h"
+#import "FullSchoolData.h"
 
 @interface SchoolTableViewController ()
 @property SchoolModelView *modelView;
@@ -24,13 +25,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [self.modelView.partial count];
+  return [self.modelView.data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"schoolCell"];
   UILabel *cellLabel = [cell viewWithTag:1000];
-  cellLabel.text = self.modelView.partial[indexPath.row][@"school_name"];
+  //TODO: fix
+  cellLabel.text = ((FullSchoolData *)self.modelView.data[indexPath.row]).name;
   return cell;
 }
 
@@ -41,10 +43,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   NSIndexPath *path = [self.tableView indexPathForCell:sender];
   DetailView *dest = segue.destinationViewController;
-  dest.dbn = self.modelView.partial[path.row][@"dbn"];
-  dest.desc = self.modelView.partial[path.row][@"overview_paragraph"];
-  dest.name = self.modelView.partial[path.row][@"school_name"];
-  dest.satData = self.modelView.sat;
+  dest.data = self.modelView.data[path.row];
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FullSchoolData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,10 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *readingScore;
 @property (weak, nonatomic) IBOutlet UILabel *writingScore;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
-@property NSString *dbn;
-@property NSString *desc;
-@property NSString *name;
-@property NSMutableArray *satData;
+- (IBAction)backButton:(id)sender;
+@property FullSchoolData *data;
 
 @end
 

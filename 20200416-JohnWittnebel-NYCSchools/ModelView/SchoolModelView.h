@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSMutableArray *sat;
 
 - (void) fullApiCall;
-//- (void) mergeApis;
+- (void) mergeApis;
 
 @end
 
